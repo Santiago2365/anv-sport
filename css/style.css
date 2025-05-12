@@ -1,0 +1,275 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* -
+LOGO
+ */
+.logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+/* BANNER
+ */
+.banner-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.banner {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* SECCIÓN DE TEXTOS
+ */
+.textos {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/*  GRID DE PRODUCTOS
+ */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* 
+TARJETAS DE PRODUCTO
+ */
+.producto {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+}
+
+.producto p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.producto button {
+  background-color: #222;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.producto button:hover {
+  background-color: #444;
+}
+
+/* 
+ACORDION (FAQ)
+ */
+.accordion-button {
+  font-weight: bold;
+}
+
+.accordion-body {
+  color: #2a2a2a;
+}
+
+/* 
+FOOTER
+ */
+footer a:hover {
+  color: #2a2a2a;
+}
+
+footer h5 {
+  font-weight: bold;
+}
+
+footer .form-control-sm {
+  border-radius: 50px;
+}
+
+footer .btn-sm {
+  border-radius: 50px;
+}
+
+/* 
+NAVBAR
+ */
+.navbar {
+  background-color: #005f73;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #c7f9cc !important;
+}
+
+/* 
+HERO “Nuestra Historia”*/
+#historia {
+  background: url('https://images.unsplash.com/photo-1674027392887-751d6396b710?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGllbmRhJTIwb25saW5lfGVufDB8fDB8fHww') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#historia .container {
+  color: #000000;
+}
+#historia h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+#historia p.lead {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/*  SECCIÓN Misión / Visión*/
+#mision h2,
+#vision h2 {
+  margin-bottom: .5rem;
+}
+#mision p,
+#vision p {
+  line-height: 1.6;
+}
+
+/* ACCORDION “Nuestros Valores”- */
+#valores .accordion-button {
+  background-color: #005f73;
+  color: #fff;
+  font-weight: bold;
+}
+#valores .accordion-button:not(.collapsed) {
+  background-color: #003f4a;
+}
+#valores .accordion-body {
+  background: #e9f5f5;
+  color: #333;
+}
+#valores h2 {
+  color: #005f73;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+/* celular (hasta 375px) */
+@media (max-width: 375px) {
+
+  /* Banner más alto para celular */
+  .banner img {
+    height: 200px;
+  }
+
+  /* Texto centrado más compacto */
+  .textos h3 {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+
+  /* Grid a 1 sola columna */
+  .grid-productos {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  /* Tarjeta de producto ocupa todo el ancho */
+  .producto {
+    max-width: 100%;
+  }
+}
+
+/*TABLET (376px a 744px)*/
+@media (min-width: 376px) and (max-width: 744px) {
+
+  /* Banner medio */
+  .banner img {
+    height: 250px;
+  }
+
+  /* Texto un poco más grande */
+  .textos h3 {
+    font-size: 1.5rem;
+    margin: 15px 20px;
+  }
+
+  /* Grid a 2 columnas */
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Tarjetas con margen interno */
+  .producto {
+    padding: 15px;
+  }
+}
+
+/* escritorio (745px en adelante)*/
+@media (min-width: 745px) {
+
+
+
+  /* Texto grande original */
+  .textos h3 {
+    font-size: 2rem;
+    margin: 0 30px;
+  }
+
+  /* Grid 3 o más columnas según espacio */
+  .grid-productos {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 30px;
+    gap: 30px;
+  }
+}
+
+
+
+    
+  
