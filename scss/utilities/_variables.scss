@@ -1,0 +1,15 @@
+// Colores
+$color-primary: #005f73;
+$color-secondary: #c7f9cc;
+$color-dark: #2c2f33;
+$color-light: #f8f9fa;
+
+// Breakpoints (mapa)
+$breakpoints: (
+  "mobile":  375px,
+  "tablet":  744px,
+  "desktop": 1440px
+);
+
+// Tipografía
+$font-base: 'Arial, sans-serif';

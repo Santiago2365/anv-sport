@@ -1,0 +1,60 @@
+
+// Tarjeta producto
+.producto {
+  background: $color-light;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include fade-in;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+
+  img {
+    border-radius: 8px;
+    margin-bottom: .75rem;
+  }
+
+  button {
+    background: $color-primary;
+    color: $color-light;
+    border: none;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: background .3s;
+
+    &:hover {
+      background: darken($color-primary, 10%);
+    }
+  }
+}
+
+// Navbar (si querés añadir estilos propios)
+.navbar {
+  background: $color-primary !important;
+
+  .nav-link {
+    color: $color-light !important;
+
+    &:hover {
+      color: $color-secondary !important;
+    }
+  }
+}
+
+// Footer
+footer {
+  background: $color-dark;
+  color: $color-light;
+  padding: 2rem 0;
+
+  a { color: $color-light; }
+
+  a:hover { color: lighten($color-light, 20%); }
+}

@@ -1,0 +1,19 @@
+// Mixin para media queries mobile-first
+@mixin respond-to($break) {
+  $size: map-get($breakpoints, $break);
+  @if $break == mobile {
+    @media (max-width: $size) { @content; }
+  } @else {
+    @media (min-width: $size) { @content; }
+  }
+}
+
+// Animaciones
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@mixin fade-in($duration: 0.8s, $timing: ease-out) {
+  animation: fadeIn $duration $timing both;
+}
